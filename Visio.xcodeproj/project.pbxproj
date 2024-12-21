@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		6449D4102D075497006F7FCA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6449D40F2D075497006F7FCA /* FirebaseAuth */; };
 		6449D4122D075497006F7FCA /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6449D4112D075497006F7FCA /* FirebaseCore */; };
+		6449D4162D09566E006F7FCA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6449D4152D09566E006F7FCA /* FirebaseFirestore */; };
+		6449D46E2D0FABE6006F7FCA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6449D46D2D0FABE6006F7FCA /* FirebaseStorage */; };
+		6449D4702D0FAC7A006F7FCA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6449D46F2D0FAC7A006F7FCA /* FirebaseStorage */; };
+		6449D4722D0FAE49006F7FCA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6449D4712D0FAE49006F7FCA /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +38,30 @@
 		6449D3FB2D053905006F7FCA /* VisioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6449D44E2D0AB4F1006F7FCA /* Exceptions for "Visio" folder in "VisioTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = 6449D3F02D053905006F7FCA /* VisioTests */;
+		};
+		6449D44F2D0AB4F1006F7FCA /* Exceptions for "Visio" folder in "VisioUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = 6449D3FA2D053905006F7FCA /* VisioUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		6449D3E32D053904006F7FCA /* Visio */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6449D44E2D0AB4F1006F7FCA /* Exceptions for "Visio" folder in "VisioTests" target */,
+				6449D44F2D0AB4F1006F7FCA /* Exceptions for "Visio" folder in "VisioUITests" target */,
+			);
 			path = Visio;
 			sourceTree = "<group>";
 		};
@@ -58,7 +83,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6449D4122D075497006F7FCA /* FirebaseCore in Frameworks */,
+				6449D4722D0FAE49006F7FCA /* FirebaseStorage in Frameworks */,
 				6449D4102D075497006F7FCA /* FirebaseAuth in Frameworks */,
+				6449D4162D09566E006F7FCA /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6449D46E2D0FABE6006F7FCA /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6449D4702D0FAC7A006F7FCA /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +150,8 @@
 			packageProductDependencies = (
 				6449D40F2D075497006F7FCA /* FirebaseAuth */,
 				6449D4112D075497006F7FCA /* FirebaseCore */,
+				6449D4152D09566E006F7FCA /* FirebaseFirestore */,
+				6449D4712D0FAE49006F7FCA /* FirebaseStorage */,
 			);
 			productName = Visio;
 			productReference = 6449D3E12D053904006F7FCA /* Visio.app */;
@@ -144,6 +175,7 @@
 			);
 			name = VisioTests;
 			packageProductDependencies = (
+				6449D46D2D0FABE6006F7FCA /* FirebaseStorage */,
 			);
 			productName = VisioTests;
 			productReference = 6449D3F12D053905006F7FCA /* VisioTests.xctest */;
@@ -167,6 +199,7 @@
 			);
 			name = VisioUITests;
 			packageProductDependencies = (
+				6449D46F2D0FAC7A006F7FCA /* FirebaseStorage */,
 			);
 			productName = VisioUITests;
 			productReference = 6449D3FB2D053905006F7FCA /* VisioUITests.xctest */;
@@ -405,9 +438,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Visio/Preview Content\"";
+				DEVELOPMENT_TEAM = 7BZFMCGRQU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -422,6 +457,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.futures.visio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -433,9 +469,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Visio/Preview Content\"";
+				DEVELOPMENT_TEAM = 7BZFMCGRQU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,6 +488,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.futures.visio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -586,6 +625,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6449D40E2D075497006F7FCA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCore;
+		};
+		6449D4152D09566E006F7FCA /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6449D40E2D075497006F7FCA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		6449D46D2D0FABE6006F7FCA /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6449D40E2D075497006F7FCA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		6449D46F2D0FAC7A006F7FCA /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6449D40E2D075497006F7FCA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		6449D4712D0FAE49006F7FCA /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6449D40E2D075497006F7FCA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

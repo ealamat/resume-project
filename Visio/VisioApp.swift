@@ -1,17 +1,46 @@
+////import SwiftUI
+////import Firebase
+////
+////@main
+////struct VisioApp: App {
+////    init() {
+////        FirebaseApp.configure()
+////    }
+////
+////    var body: some Scene {
+////        WindowGroup {
+////            NavigationStack{
+////                First_Screen()
+////            }
+////        }
+////    }
+////}
 //
-//  VisioApp.swift
-//  Visio
+//import SwiftUI
+//import Firebase
 //
-//  Created by Elias Alamat on 12/7/24.
-//
-
-import SwiftUI
-
 //@main
-//struct VisioApp: App {
+//struct YourApp: App {
+//    @StateObject var currentUser = CurrentUser()
+//
+//    init() {
+//        FirebaseApp.configure()
+//    }
+//
 //    var body: some Scene {
 //        WindowGroup {
-//            First_Screen()
+//            NavigationView {
+//                if currentUser.id.isEmpty {
+//                    // Show login view when user is logged out
+//                    First_Screen()
+//                        .environmentObject(currentUser)
+//                } else {
+//                    // Show first screen when user is logged in
+//                    //LoggedinView()
+//                        //.environmentObject(currentUser)
+//                }
+//            }
 //        }
 //    }
 //}
+//
